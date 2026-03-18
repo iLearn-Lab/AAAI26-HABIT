@@ -31,22 +31,50 @@
 
 ## ✨ Key Features
 
-- 🧠 **Mutual Knowledge Estimation (MKE)**: Precisely quantifies sample cleanliness by computing the *Transition Rate* of mutual knowledge between composed features and target images, effectively identifying clean samples that align with modification semantics.
-- ⏳ **Dual-consistency Progressive Learning (DPL)**: Introduces a collaborative mechanism between historical and current models to simulate human habit formation (retaining good habits and calibrating bad ones), enabling robust learning against noisy data interference.
-- 🛡️ **Highly Robust to NTC**: Maintains State-of-the-Art (SOTA) retrieval performance under various Noise Triplet Correspondence (NTC) settings with different noise ratios (0%, 20%, 50%, 80%$).
+  - 🧠 **Mutual Knowledge Estimation (MKE)**: Precisely quantifies sample cleanliness by computing the *Transition Rate* of mutual knowledge between composed features and target images, effectively identifying clean samples that align with modification semantics.
+  - ⏳ **Dual-consistency Progressive Learning (DPL)**: Introduces a collaborative mechanism between historical and current models to simulate human habit formation (retaining good habits and calibrating bad ones), enabling robust learning against noisy data interference.
+  - 🛡️ **Highly Robust to NTC**: Maintains State-of-the-Art (SOTA) retrieval performance under various Noise Triplet Correspondence (NTC) settings with different noise ratios (0%, 20%, 50%, 80%).
 
----
 
 ## 🏗️ Architecture
 
 <p align="center">
   <img src="assets/HABIT-AAAI26.png" alt="HABIT architecture" width="1000">
+  <figcaption><strong>Figure 1.</strong> HABIT consists of two modules: (a) Mutual Knowledge Estimation and (b) Dual-consistency Progressive Learning. </figcaption>
 </p>
+
+## 🏃‍♂️ Experiment-Results
+
+### CIR Task Performance
+
+> 💡 <span style="color:#2980b9;">**Note for Fully-Supervised CIR Benchmarking:**</span> 
+> 🎯 The **0% noise** setting in the table below is equivalent to the **traditional fully-supervised CIR** paradigm. We highlight this `0%` block to facilitate direct and fair comparisons for researchers working on conventional supervised methods.
+
+
+#### FIQ:
+
+<caption><strong>Table 1.</strong> Performance comparison on FashionIQ in terms of R@K (%). The best result under each noise ratio is highlighted in
+bold, while the second-best result is underlined.</caption>
+
+![](./assets/results-fiq.png)
+
+
+
+#### CIRR：
+<caption><strong>Table 1.</strong> Performance comparison on the CIRR test set in terms of R@K (%) and Rsub@K (%). The best and second-best results
+are highlighted in bold and underlined, respectively.</caption>
+
+![](./assets/results-cirr.png)
+
+---
 
 ## Table of Contents
 
+- [Introduction](#-introduction)
 - [News](#-news)
 - [Key Features](#-key-features)
+- [Architecture](#️-architecture)
+- [Experiment Results](#️-experiment-results)
 - [Install](#-install)
 - [Data Preparation](#-data-preparation)
 - [Quick Start](#-quick-start)
@@ -55,6 +83,7 @@
 - [Project Structure](#-project-structure)
 - [Citation](#-citation)
 - [Acknowledgement](#-acknowledgement)
+- [Contact](#️-contact)
 
 ---
 
@@ -212,19 +241,54 @@ HABIT/
 -----
 
 
-## 🏃‍♂️ Experiment Results
-### CIR Task Performance
-#### CIRR：
-![](./assets/results-cirr.png)
-#### FIQ:
-![](./assets/results-fiq.png)
 
 
------
 
-## 📝 Citation
+## 🤝 Acknowledgement
 
-If you find our work or this code useful in your research, please consider leaving a star or citing our paper 🥰:
+The implementation of this project references the [LAVIS](https://github.com/salesforce/LAVIS) framework and the noise setting concepts from [TME](https://github.com/li-shuxian/TME). We express our sincere gratitude to these open-source contributions\!
+
+
+## ✉️ Contact
+For any questions, issues, or feedback, please open an [issue](https://github.com/Lee-zixu/HABIT/issues) on GitHub or reach out to me at lizixu.cs@gmail.com.
+
+
+<!-- ## 🔗 Related Projects
+
+*Ecosystem & Other Works from our Team*
+
+<table align="center">
+  <tr>
+    <td align="center" width="33%">
+      <a href="https://github.com/YOUR_GITHUB_USERNAME/Project1">
+        <h2>⚡️</h2>
+        <b>Project1</b>
+      </a><br>
+      <a href="https://github.com/YOUR_GITHUB_USERNAME/Project1">Simple and Fast CIR Framework</a>
+    </td>
+    <td align="center" width="33%">
+      <a href="https://github.com/YOUR_GITHUB_USERNAME/Project2">
+        <h2>🎥</h2>
+        <b>VideoCIR</b>
+      </a><br>
+      <a href="https://github.com/YOUR_GITHUB_USERNAME/Project2">Composed Video Retrieval Baseline</a>
+    </td>
+    <td align="center" width="33%">
+      <a href="https://github.com/YOUR_GITHUB_USERNAME/Project3">
+        <h2>✨</h2>
+        <b>MiniCIR</b>
+      </a><br>
+      <a href="https://github.com/YOUR_GITHUB_USERNAME/Project3">Extremely Simple CIR Tool</a>
+    </td>
+  </tr>
+</table>
+
+--- -->
+
+
+## 📝⭐️ Citation
+
+If you find our work or this code useful in your research, please consider leaving a **Star**⭐️ or **Citing**📝 our paper 🥰. Your support is our greatest motivation!
 
 ```bibtex
 @inproceedings{HABIT,
@@ -235,10 +299,8 @@ If you find our work or this code useful in your research, please consider leavi
 }
 ```
 
-## 🤝 Acknowledgement
+## 🫡 Support & Contributing
 
-The implementation of this project references the [LAVIS](https://github.com/salesforce/LAVIS) framework and the noise setting concepts from [TME](https://github.com/li-shuxian/TME). We express our sincere gratitude to these open-source contributions\!
-
-
-## ✉️ Contact
-For any questions, issues, or feedback, please open an issue on GitHub or reach out to me at lizixu.cs@gmail.com.
+We welcome all forms of contributions! If you have any questions, ideas, or find a bug, please feel free to:
+- Open an [Issue](https://github.com/YOUR_GITHUB_USERNAME/HABIT/issues) for discussions or bug reports.
+- Submit a [Pull Request](https://github.com/YOUR_GITHUB_USERNAME/HABIT/pulls) to improve the codebase.
