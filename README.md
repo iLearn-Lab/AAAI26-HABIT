@@ -1,4 +1,5 @@
 
+<a id="top"></a>
 <div align="center">
  <img src="./assets/logo.png" width="500"> 
   <h1>(AAAI 2026) HABIT: Chrono-Synergia Robust Progressive Learning Framework for Composed Image Retrieval</h1>
@@ -20,14 +21,18 @@
   </p>
 </div>
 
+
 ## 📌 Introduction
 
 **HABIT** (cHrono-synergiA roBust progressIve learning framework for composed image reTrieval) is our proposed robust learning framework for Composed Image Retrieval, accepted by AAAI 2026. Based on an in-depth analysis of the "Noise Triplet Correspondence (NTC)" problem in real-world retrieval scenarios, HABIT effectively addresses the shortcomings of existing methods in precisely estimating composed semantic discrepancies and progressively adapting to modification discrepancies.
+
+[⬆ Back to top](#top)
 
 ## 📢 News
 - **[2026-03-18]** 🚀 Released all codes for HABIT.
 - **[2025-11-08]** 🔥 Our paper *"HABIT: Chrono-Synergia Robust Progressive Learning Framework for Composed Image Retrieval"* has been accepted by **AAAI 2026**!
 
+[⬆ Back to top](#top)
 
 ## ✨ Key Features
 
@@ -35,6 +40,7 @@
   - ⏳ **Dual-consistency Progressive Learning (DPL)**: Introduces a collaborative mechanism between historical and current models to simulate human habit formation (retaining good habits and calibrating bad ones), enabling robust learning against noisy data interference.
   - 🛡️ **Highly Robust to NTC**: Maintains State-of-the-Art (SOTA) retrieval performance under various Noise Triplet Correspondence (NTC) settings with different noise ratios (0%, 20%, 50%, 80%).
 
+[⬆ Back to top](#top)
 
 ## 🏗️ Architecture
 
@@ -42,6 +48,8 @@
   <img src="assets/HABIT-AAAI26.png" alt="HABIT architecture" width="1000">
   <figcaption><strong>Figure 1.</strong> HABIT consists of two modules: (a) Mutual Knowledge Estimation and (b) Dual-consistency Progressive Learning. </figcaption>
 </p>
+
+[⬆ Back to top](#top)
 
 ## 🏃‍♂️ Experiment-Results
 
@@ -66,7 +74,10 @@ are highlighted in bold and underlined, respectively.</caption>
 
 ![](./assets/results-cirr.png)
 
+[⬆ Back to top](#top)
+
 ---
+
 
 ## Table of Contents
 
@@ -87,6 +98,7 @@ are highlighted in bold and underlined, respectively.</caption>
 - [Support & Contributing](#-support--contributing)
 
 ---
+
 
 ## 📦 Install
 
@@ -114,6 +126,7 @@ pip install open-clip-torch==2.24.0 scikit-learn==1.3.2 transformers==4.25.0 sal
 
 > **Note**: Key dependencies include `salesforce-lavis` for the base architecture, `open-clip-torch` for vision-language features, and `scikit-learn` for DBSCAN clustering during Noise Discrimination.
 
+[⬆ Back to top](#top)
 
 -----
 
@@ -169,6 +182,8 @@ Please follow the official instructions to download the CIRR dataset. Once downl
 
 </details>
 
+[⬆ Back to top](#top)
+
 -----
 
 ## 🚀 Quick Start
@@ -217,6 +232,8 @@ python src/cirr_test_submission.py checkpoints/cirr_noise0.5/
 
 *(The corresponding script will automatically output `.json` based on the generated best checkpoints in the folder for online evaluation.)*
 
+[⬆ Back to top](#top)
+
 -----
 
 ## 📁 Project Structure
@@ -249,9 +266,13 @@ HABIT/
 
 The implementation of this project references the [LAVIS](https://github.com/salesforce/LAVIS) framework and the noise setting concepts from [TME](https://github.com/li-shuxian/TME). We express our sincere gratitude to these open-source contributions\!
 
+[⬆ Back to top](#top)
+
 
 ## ✉️ Contact
 For any questions, issues, or feedback, please open an [issue](https://github.com/Lee-zixu/HABIT/issues) on GitHub or reach out to me at lizixu.cs@gmail.com.
+
+[⬆ Back to top](#top)
 
 
 <!-- ## 🔗 Related Projects
@@ -300,8 +321,12 @@ If you find our work or this code useful in your research, please consider leavi
 }
 ```
 
+[⬆ Back to top](#top)
+
 ## 🫡 Support & Contributing
 
 We welcome all forms of contributions! If you have any questions, ideas, or find a bug, please feel free to:
 - Open an [Issue](https://github.com/Lee-zixu/HABIT/issues) for discussions or bug reports.
 - Submit a [Pull Request](https://github.com/Lee-zixu/HABIT/pulls) to improve the codebase.
+
+[⬆ Back to top](#top)
