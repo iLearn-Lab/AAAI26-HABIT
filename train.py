@@ -275,9 +275,6 @@ def train_and_evaluate(model, optimizer, trainset, testset, txt_processors):
         model.soft_labels = []
         model.sim = []
         logging.info("Epoch {}/{}".format(epoch + 1, epoches))
-        # if epoch % 2 != 0:
-        #     train(model, optimizer, trainloader_shuffle, scaler, epoch, txt_processors, step=step, soft_label_old=soft_label_old,similarity_matrix_old =similarity_matrix_old)
-        # else:
         train(model, optimizer, trainloader, scaler, epoch, txt_processors, step=step,soft_label_old=soft_label_old,similarity_matrix_old = similarity_matrix_old)
         current_score = 0
         current_result = []
@@ -304,24 +301,7 @@ def train_and_evaluate(model, optimizer, trainset, testset, txt_processors):
                 best_parameters_model = model
         else:
 
-            if args.dataset == 'shoes':
-                t = test.test(args, model, trainset, 'shoes', txt_processors)
-                logging.info(t)
-                current_score = current_score + t[1][1] + t[2][1]
-            elif args.dataset == 'birds':
-                t = test.test(args, model, testset, 'birds', txt_processors)
-                logging.info(t)
-                current_score = current_score + t[1][1]
-            elif args.dataset == 'lasco':
-                continue
-                t = test.test(args, model, testset, 'lasco', txt_processors)
-                logging.info(t)
-                current_score = current_score + t[1][1]
-            elif args.dataset == 'fashion200k':
-                t = test.test(args, model, testset, 'fashion200k', txt_processors)
-                logging.info(t)
-                current_score = current_score + t[1][1]
-            elif args.dataset == 'cirr':
+            if args.dataset == 'cirr':
                 torch.save(model, os.path.join(args.model_dir, f'model_epoch_{epoch}.pt'))
                 t = test.test_cirr_valset(args, model, trainset, txt_processors)
                 logging.info(t)
